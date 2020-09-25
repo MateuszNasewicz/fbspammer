@@ -34,7 +34,7 @@ finally:
     lista_id.pop(0)
 
 for item in lista_id:
-    print(str(lista_id.index(item)+1)/len(lista_id)+"messages sent")
+    print(str(lista_id.index(item)+1)+"/"+str(len(lista_id))+"messages sent")
     driver.get("https://m.facebook.com/" + item)
     try:
         WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID, "page")))
